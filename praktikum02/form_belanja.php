@@ -55,8 +55,8 @@
             <label for="produk_0" class="custom-control-label">Cusion</label>
           </div>
           <div class="custom-control custom-radio custom-control-inline">
-            <input name="produk" id="produk_1" type="radio" class="custom-control-input" value="Pondation" required="required">
-            <label for="produk_1" class="custom-control-label">Pondation</label>
+            <input name="produk" id="produk_1" type="radio" class="custom-control-input" value="Foundation" required="required">
+            <label for="produk_1" class="custom-control-label">Foundation</label>
           </div>
           <div class="custom-control custom-radio custom-control-inline">
             <input name="produk" id="produk_2" type="radio" class="custom-control-input" value="Lipstik" required="required">
@@ -91,7 +91,7 @@
           <td>: 120.000</td>
         </tr>
         <tr>
-          <td>Pondation</td>
+          <td>Foundation</td>
           <td>: 96.000</td>
         </tr>
         <tr>
@@ -119,7 +119,7 @@
       case 'Cusion':
         echo "<br> Total Harga : " . $cusion;
         break;
-      case 'Pondation':
+      case 'Foundation':
         echo "<br> Total Harga : " . $pondation;
         break;
       case 'Lipstik':
