@@ -1,9 +1,9 @@
 <?php
 // Buat array asosiatif nilai
-$nilai1 = ["id" => 1, "nim" => "011013456", "uts" => 80, "uas" => 84, "tugas" => 78];
-$nilai2 = ["id" => 2, "nim" => "011023456", "uts" => 90, "uas" => 80, "tugas" => 88];
-$nilai3 = ["id" => 3, "nim" => "011033456", "uts" => 70, "uas" => 74, "tugas" => 70];
-$nilai4 = ["id" => 4, "nim" => "011043456", "uts" => 88, "uas" => 95, "tugas" => 80];
+$nilai1 = ["id" => 1, "nama" => "Adelia Putri", "uts" => 88, "uas" => 84, "tugas" => 78];
+$nilai2 = ["id" => 2, "nama" => "Khansa Salsabila", "uts" => 90, "uas" => 75, "tugas" => 88];
+$nilai3 = ["id" => 3, "nama" => "Raisa Anggreni", "uts" => 70, "uas" => 64, "tugas" => 70];
+$nilai4 = ["id" => 4, "nama" => "Nashwa Maiharina", "uts" => 98, "uas" => 95, "tugas" => 90];
 
 // Buat array multidimensi
 $kumpulan_nilai = [$nilai1, $nilai2, $nilai3, $nilai4];
@@ -30,7 +30,7 @@ $kumpulan_nilai = [$nilai1, $nilai2, $nilai3, $nilai4];
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">NIM</th>
+                    <th scope="col">NAMA</th>
                     <th scope="col">UTS</th>
                     <th scope="col">UAS</th>
                     <th scope="col">Tugas</th>
@@ -44,7 +44,7 @@ $kumpulan_nilai = [$nilai1, $nilai2, $nilai3, $nilai4];
                     <tr>
                         <?php $nilai_akhir = ($nilai["uts"] + $nilai["uas"] + $nilai["tugas"]) / 3; ?>
                         <td><?= $nilai["id"]?></td>
-                        <td><?= $nilai["nim"]?></td>
+                        <td><?= $nilai["nama"]?></td>
                         <td><?= $nilai["uts"]?></td>
                         <td><?= $nilai["uas"]?></td>
                         <td><?= $nilai["tugas"]?></td>
