@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    background-color: #32323b !important;
+}
+
+a.nav-link {
+    color: #dabebe !important;
+    font-size: 17px;
+}
+
+.navbar {
+    background-color: #423844;
+    color: #fcf8f8 !important;
+}
+
+.navbar li a:hover {
+    color: #5f4e4e !important;
+}
+
+#logout {
+    text-align: center;
+    background-color: #725e5e;
+    border-radius: 20px;
+    width: 95px;
+}
+
+#logout:hover{
+    background-color: #b6a7a7;
+}
+
+.content-wrapper {
+    background-color: #d1bebe !important;
+}
+
+.card {
+    background-color: #af9999 !important;
+    margin: 0;
+}
+
+.table {
+    text-align: justify;
+    font-size: 15px;
+}
+
+.main-footer {
+    background-color: #423844;
+    font-size: 12px;
+}
+
+.btn-primary {
+    font-size: 15px;
+    background-color: #52529b;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: rgb(39, 70, 110);
+    border: none;
+}
+
+.btn-warning {
+    font-size: 15px;
+    background-color: rgb(240, 203, 84);
+    border: none;
+    margin: 4px;
+}
+
+.btn-warning:hover {
+    background-color: rgb(235, 187, 33);
+}
+
+.btn-danger {
+    font-size: 15px;
+    background-color: rgb(243, 67, 67);
+    border: none;
+}
+
+@media only screen and (max-width: 765px) {
+
+    .nav1 {
+        padding-left: 0 !important;
+        margin: 0;
+    }
+
+    .nav2 {
+        padding-left: 20px !important;
+    }
+
+    img {
+        width: 230px;
+        border-radius: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        width: 380px;
+        border-radius: 20px !important;
+    }
+
+    .nav2 {
+        padding-left: 0 !important;
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    img {
+        width: 300px;
+        border-radius: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    img {
+        width: 250px;
+        border-radius: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    img {
+        width: 200px;
+        border-radius: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    img {
+        width: 170px;
+        border-radius: 20px !important;
+    }
+}
