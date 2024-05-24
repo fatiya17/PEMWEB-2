@@ -66,7 +66,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="../login/login.php" class="nav-link" id="logout">Log Out</a>
+                    <a href="../landing/landingpage.php" class="nav-link" id="logout">Log Out</a>
                 </li>
 
             </ul>
