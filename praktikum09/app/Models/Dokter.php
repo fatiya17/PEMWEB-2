@@ -5,22 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pasien extends Model
+class Dokter extends Model
 {
     use HasFactory;
-    protected $table = "pasiens"; //nama table yang digunakan
+    protected $table = "dokters"; //nama table yang digunakan
 
     //kolom yang dapat diisi di tabel pasien
     protected $fillable = [
-        'kode',
         'nama',
+        'gender',
         'tmp_lahir',
         'tgl_lahir',
-        'gender',
-        'email',
+        'kategori',
+        'telpon',
         'alamat',
     ];
-
-    //dissable timestamp
-    public $timestamps =  false;
 }

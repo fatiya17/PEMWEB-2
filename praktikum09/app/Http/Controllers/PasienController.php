@@ -12,7 +12,7 @@ class PasienController extends Controller
      */
     public function index()
     {
-        
+
         $pasien = Pasien::get();
         return view('pasien.index', compact('pasien'));
     }
@@ -22,7 +22,8 @@ class PasienController extends Controller
      */
     public function create()
     {
-        //
+        // Return the view for creating a new pasien
+        return view('pasien.create');
     }
 
     /**
@@ -30,7 +31,30 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate the incoming request data
+        $request->validate([
+            'kode' => 'required|string',
+            'nama' => 'required|string',
+            'tmp_lahir' => 'required|string',
+            'tgl_lahir' => 'required|date',
+            'gender' => 'required|string',
+            'email' => 'required|string',
+            'alamat' => 'required|string',
+        ]);
+
+        // Create a new Pasien instance with the validated data
+        Pasien::create([
+            'kode' => $request->kode,
+            'nama' => $request->nama,
+            'tmp_lahir' => $request->tmp_lahir,
+            'tgl_lahir' => $request->tgl_lahir,
+            'gender' => $request->gender,
+            'email' => $request->email,
+            'alamat' => $request->alamat,
+        ]);
+
+        // Redirect to the index page with a success message
+        return redirect()->route('pasiens.index')->with('success', 'Pasien created successfully.');
     }
 
     /**
@@ -39,6 +63,7 @@ class PasienController extends Controller
     public function show(Pasien $pasien)
     {
         //
+        return view('pasien.show', compact('pasien'));
     }
 
     /**
@@ -62,6 +87,10 @@ class PasienController extends Controller
      */
     public function destroy(Pasien $pasien)
     {
-        //
+        // Delete the Pasien instance
+        $pasien->delete();
+
+        // Redirect back to the index page with a success message
+        return redirect()->route('pasiens.index');
     }
 }

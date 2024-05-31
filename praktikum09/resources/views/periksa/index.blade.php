@@ -39,41 +39,27 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h1 class="my-4">Daftar Pasien</h1>
-                    <a href="{{ route('pasiens.create') }}"class="btn btn-primary">Tambah Pasien</a>
+                    <h1 class="my-4">Daftar Periksa</h1>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Kode</th>
-                                <th>Nama</th>
-                                <th>Tempat Lahir</th>
-                                <th>Tanggal Lahir</th>
-                                <th>Gender</th>
-                                <th>Email</th>
-                                <th>Alamat</th>
+                                <th>Tanggal</th>
+                                <th>Berat</th>
+                                <th>Tinggi</th>
+                                <th>Tensi</th>
+                                <th>Keterangan</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($pasien as $pasien)
+                            @foreach ($periksa as $periksa)
                                 <tr>
-                                    <td>{{ $pasien->id }}</td>
-                                    <td>{{ $pasien->kode }}</td>
-                                    <td>{{ $pasien->nama }}</td>
-                                    <td>{{ $pasien->tmp_lahir }}</td>
-                                    <td>{{ $pasien->tgl_lahir }}</td>
-                                    <td>{{ $pasien->gender }}</td>
-                                    <td>{{ $pasien->email }}</td>
-                                    <td>{{ $pasien->alamat }}</td>
-                                    <td>
-                                        <a href="{{ route('pasiens.show', $pasien->id) }}" class="btn btn-info btn-sm">Read</a>
-                                        <a class="btn btn-warning btn-sm">Edit</a>
-                                        <form action="{{ route('pasiens.destroy', $pasien->id) }}" method="POST" style="display: inline;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this pasien?')">Delete</button>
-                                        </form>
-                                    </td>
+                                    <td>{{ $periksa->id }}</td>
+                                    <td>{{ $periksa->tanggal }}</td>
+                                    <td>{{ $periksa->berat }}</td>
+                                    <td>{{ $periksa->tinggi }}</td>
+                                    <td>{{ $periksa->tensi }}</td>
+                                    <td>{{ $periksa->keterangan }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
